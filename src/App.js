@@ -2,27 +2,23 @@ import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-rout
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Product from './Pages/Product';
+import Navbar from './Components/Navbar';
 import ProductCard from './Components/ProductCard';
 
 function App() {
-  
+
   return (
     <div className="App">
-      {/* <Router>
-        <nav>
-          <Link to={'/'}>Home</Link>
-          <Link to={'/about'}>About</Link>
-          <Link to={'/product'}>Products</Link>
-        </nav>
+      <Router>
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/product' element={<Product />}>
+          <Route path='/products' element={<Product />}>
             <Route path='' element={<ProductCard />} />
           </Route>
         </Routes>
-      </Router> */}
-      <ProductCard />
+      </Router>
     </div>
   );
 
